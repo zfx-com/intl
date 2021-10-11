@@ -167,6 +167,16 @@ class Intl {
           bool? skip}) =>
       _message(messageText, locale, name, args, meaning);
 
+  static String getMessage(String? messageText,
+          {String? desc = '',
+          Map<String, Object>? examples,
+          String? locale,
+          String? name,
+          List<Object>? args,
+          String? meaning,
+          bool? skip}) =>
+      _message(messageText, locale, name, args, meaning);
+
   /// Omit the compile-time only parameters so dart2js can see to drop them.
   @pragma('dart2js:noInline')
   static String _message(String? messageText, String? locale, String? name,
