@@ -167,7 +167,7 @@ class Intl {
           bool? skip}) =>
       _message(messageText, locale, name, args, meaning);
 
-  static String getMessage(String? messageText,
+  static String? getMessage(String? messageText,
           {String? desc = '',
           Map<String, Object>? examples,
           String? locale,
@@ -175,7 +175,7 @@ class Intl {
           List<Object>? args,
           String? meaning,
           bool? skip}) =>
-      _message(messageText, locale, name, args, meaning);
+      _lookupMessage(messageText, locale, name, args, meaning);
 
   /// Omit the compile-time only parameters so dart2js can see to drop them.
   @pragma('dart2js:noInline')
